@@ -11,3 +11,13 @@ This template can be used to repeatedly create the following environment:
    - Instance Type
    - SSH Key pair
    - Using a startup template to install package(s) on boot
+
+### Requirement:
+A locally installed terraform binary. Refer to https://www.terraform.io/downloads.html on how to download and install Terraform
+
+### USAGE:
+
+- git clone git@github.com:kramfs/terraform_sandbox.git
+- cd aws_base_instance
+- terraform init
+- terraform plan
