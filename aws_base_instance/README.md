@@ -31,10 +31,7 @@ export AWS_SECRET_ACCESS_KEY=$(aws configure get $PROFILE_ID.aws_secret_access_k
 export AWS_DEFAULT_REGION=$(aws configure get $PROFILE_ID.region)
 ```
 
-# launch sequence
 4. terraform init
 5. terraform plan
 6. terraform apply
-
-# clean up
-7 terraform destroy
+7. terraform destroy
