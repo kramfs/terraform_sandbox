@@ -1,11 +1,11 @@
 # Get the list of official Canonical Ubuntu 18.04 AMIs
-data "aws_ami" "ubuntu-1804" {
+data "aws_ami" "ubuntu-2004" {
   most_recent = true
 
   filter {
     name   = "name"
     #values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"]
-    values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
   }
 
   filter {
@@ -26,8 +26,8 @@ resource "aws_key_pair" "ssh_key" {
 }
 
 resource "aws_instance" "ssh_host" {
-  ami           = data.aws_ami.ubuntu-1804.id
-  instance_type = "t2.micro"
+  ami           = data.aws_ami.ubuntu-2004.id
+  instance_type = var.instancetype           # default to "t2.micro", see input.tfvars    
   key_name      = aws_key_pair.ssh_key.id
 
   subnet_id              = element(aws_subnet.default.*.id, 0)

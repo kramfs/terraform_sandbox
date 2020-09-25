@@ -4,29 +4,26 @@ variable "vpc_cidr_block" {
 }
 
 variable "cidr_blocks" {
-  description = "The CIDR blocks to create the workstations in."
+  description = "The CIDR blocks to create the instance."
   default     = ["10.1.1.0/24", "10.1.2.0/24"]
 }
 
 variable "region" {
-  default = "ap-southeast-1"
+  description = "Region to provision the resource i.e. ap-southeast-1. Enter to accept default.."
+  #default = "ap-southeast-1"
+}
+
+variable "instancetype" {
+  description = "Instance type to use i.e. t2.micro. Enter to accept default.."
+  default = "t2.micro"
 }
 
 variable "namespace" {
-  description = "Default namespace"
+  description = "Give it a project namespace name i.e. test-deployment. Enter to accept default.."
 }
-
-#variable "cluster_id" {
-#  description = "Id to assign the new cluster"
-#}
 
 variable "public_key_path" {
   description = "Path to public key for ssh access"
   default     = "~/.ssh/id_rsa.pub"
-}
-
-variable "node_groups" {
-  description = "Number of nodes groups to create in the cluster"
-  default     = 3
 }
 

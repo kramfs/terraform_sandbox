@@ -1,9 +1,11 @@
-/aws_base_instance/terraform.tfplan
-/aws_base_instance/terraform.tfstate
-/aws_base_instance/.terraform/
+./aws_base_instance/*.tfplan
+./aws_base_instance/*.tfstate
+./aws_base_instance/*.tfstate*
+./aws_base_instance/.terraform/
 ./*.tfstate
 .terraform/
 .vscode
 .*.swp
 *.log
 *.bak
+.git
