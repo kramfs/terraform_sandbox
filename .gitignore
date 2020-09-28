@@ -1,6 +1,6 @@
 aws_base_instance/*.tfplan
-aws_base_instance/*.tfstate
-aws_base_instance/*.tfstate.backup
+aws_base_instance/terraform.tfstate
+aws_base_instance/terraform.tfstate.backup
 aws_base_instance/.terraform/
 ./*.tfstate
 .terraform/

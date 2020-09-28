@@ -15,7 +15,7 @@ variable "region" {
 
 variable "instancetype" {
   description = "Instance type to use i.e. t2.micro. Enter to accept default.."
-  default = "t2.micro"
+  #default = "t2.micro"
 }
 
 variable "namespace" {
