@@ -3,6 +3,13 @@ variable "vpc_cidr_block" {
   default     = "10.1.0.0/16"
 }
 
+##############################################################################
+# Variables File
+#
+# This is where we store the default values for all the variables used in our
+# Terraform code. If you create a variable with no "default", the user will be
+# prompted to enter it (or define it via config file or command line flags.)
+
 variable "cidr_blocks" {
   description = "The CIDR blocks to create the instance."
   default     = ["10.1.1.0/24", "10.1.2.0/24"]
@@ -26,4 +33,3 @@ variable "public_key_path" {
   description = "Path to public key for ssh access"
   default     = "~/.ssh/id_rsa.pub"
 }
-

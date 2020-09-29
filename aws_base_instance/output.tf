@@ -1,27 +1,36 @@
-output "ssh_host_ip" {
-  value = aws_instance.ssh_host.public_ip
-}
+##############################################################################
+# Outputs File
+#
+# Expose the outputs you want your users to see after a successful
+# `terraform apply` or `terraform output` command. You can add your own text
+# and include any data from the state file. Outputs are sorted alphabetically;
+# use an underscore _ to move things to the bottom.
 
-output "ssh_host_subnet_id" {
+output "subnet_id" {
   value = aws_instance.ssh_host.subnet_id
 }
 
-output "ssh_host_instance_id" {
+output "instance_id" {
   value = aws_instance.ssh_host.id
 }
 
-output "ssh_host_instance_type" {
+output "instance_type" {
   value = aws_instance.ssh_host.instance_type
 }
 
-output "ssh_host_security_group" {
+output "security_group" {
   value = aws_instance.ssh_host.security_groups
 }
 
-output "ssh_host_availability_zone" {
+output "availability_zone" {
   value = aws_instance.ssh_host.availability_zone
 }
 
-output "ssh_host_ami" {
+output "ami" {
   value = aws_instance.ssh_host.ami
+}
+
+output "_public_ip" {
+  #value = aws_instance.ssh_host.public_ip
+  value = "http://${aws_instance.ssh_host.public_ip}"
 }

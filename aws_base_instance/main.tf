@@ -1,4 +1,4 @@
-# Get the list of official Canonical Ubuntu 18.04 AMIs
+# Get the list of official Canonical Ubuntu AMIs
 data "aws_ami" "ubuntu-2004" {
   most_recent = true
 
